@@ -1,0 +1,63 @@
+{
+  "name": "mind-cast-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node ./src/bin",
+    "dev": "cross-env NODE_ENV=development nodemon ./src/bin/index.js --ignore __tests__",
+    "test": "cross-env NODE_ENV=test jest --detectOpenHandles",
+    "test:coverage": "cross-env NODE_ENV=test jest --coverage --detectOpenHandles",
+    "test:coveralls": "cross-env NODE_ENV=test jest --coverage --coverageReporters=text-lcov | coveralls",
+    "lint": "eslint '**/*.js'",
+    "lint:fix": "prettier-eslint '**/*.js' --write"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "*.js": [
+      "npm run lint:fix",
+      "npm run lint",
+      "git add"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/steniowagner/mindCast-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/steniowagner/mindCast-server/issues"
+  },
+  "homepage": "https://github.com/steniowagner/mindCast-server#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "gridfs-stream": "https://github.com/steniowagner/gridfs-stream/tarball/ef19db5ef74111f4d381581973d4fe7c93851d59",
+    "mongoose": "^5.4.14",
+    "mp3-duration": "^1.1.0",
+    "multer": "^1.4.1"
+  },
+  "devDependencies": {
+    "coveralls": "^3.0.3",
+    "cross-env": "^5.2.0",
+    "eslint": "^5.16.0",
+    "eslint-config-airbnb-base": "^13.1.0",
+    "eslint-plugin-import": "^2.16.0",
+    "faker": "^4.1.0",
+    "husky": "^1.3.1",
+    "jest": "^24.7.1",
+    "lint-staged": "^8.1.5",
+    "nodemon": "^1.18.10",
+    "prettier-eslint": "^8.8.2",
+    "prettier-eslint-cli": "^4.7.1",
+    "superagent-binary-parser": "^1.0.1",
+    "supertest": "^4.0.2"
+  }
+}
