@@ -83,7 +83,7 @@
 # 📂 Project Structure
 
 ```bash
-mindcast-server/
+Backend-API-para-streaming-y-gesti-n-de-podcasts/
 │
 ├── src/
 │   ├── controllers/
@@ -108,8 +108,8 @@ mindcast-server/
 ## Clone the repository
 
 ```bash
-git clone https://github.com/steniowagner/mindcast-server.git
-cd mindcast-server
+git clone https://github.com/isairey/Backend-API-para-streaming-y-gesti-n-de-podcasts.git
+cd Backend-API-para-streaming-y-gesti-n-de-podcasts
 ```
 
 ## Install dependencies
@@ -154,7 +154,7 @@ yarn dev
 Server will run at:
 
 ```bash
-http://localhost:3001/mind-cast/api/v1/
+http://localhost:3001/Backend-API-para-streaming-y-gesti-n-de-podcasts/api/v1/
 ```
 
 ---
@@ -192,7 +192,7 @@ yarn test:coverage
 ## Base URL
 
 ```bash
-http://localhost:3001/mind-cast/api/v1/
+http://localhost:3001/Backend-API-para-streaming-y-gesti-n-de-podcasts/api/v1/
 ```
 
 ---
@@ -372,12 +372,12 @@ git push origin feature/new-feature
 
 ---
 
-# 👨‍💻 Author
+# 👨‍💻 Desarrollador
 
-### Stenio Wagner
+### Isai Reyes - FullStack Developer
 
-- GitHub: https://github.com/steniowagner
-- LinkedIn: https://www.linkedin.com/in/steniowagner/
+- GitHub: https://github.com/isairey
+
 
 ---
 
