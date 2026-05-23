@@ -99,3 +99,288 @@ mindcast-server/
 ├── .env
 ├── package.json
 └── README.md
+```
+
+---
+
+# ⚙️ Installation
+
+## Clone the repository
+
+```bash
+git clone https://github.com/steniowagner/mindcast-server.git
+cd mindcast-server
+```
+
+## Install dependencies
+
+Using npm:
+
+```bash
+npm install
+```
+
+Or using yarn:
+
+```bash
+yarn
+```
+
+---
+
+# 🚀 Running the Server
+
+## Requirements
+
+Before starting the server, make sure you have:
+
+- Node.js 8+
+- MongoDB installed and running on port `27017`
+
+## Start development server
+
+Using npm:
+
+```bash
+npm run dev
+```
+
+Or using yarn:
+
+```bash
+yarn dev
+```
+
+Server will run at:
+
+```bash
+http://localhost:3001/mind-cast/api/v1/
+```
+
+---
+
+# 🧪 Running Tests
+
+## Run tests
+
+```bash
+npm test
+```
+
+Or:
+
+```bash
+yarn test
+```
+
+## Run tests with coverage
+
+```bash
+npm run test:coverage
+```
+
+Or:
+
+```bash
+yarn test:coverage
+```
+
+---
+
+# 🔗 API Routes
+
+## Base URL
+
+```bash
+http://localhost:3001/mind-cast/api/v1/
+```
+
+---
+
+## Health Check
+
+```http
+GET /
+```
+
+Returns API status.
+
+---
+
+## Home
+
+```http
+GET /home?categories=all
+```
+
+Returns podcasts and authors based on selected categories.
+
+---
+
+## Categories
+
+```http
+GET /categories/:category
+```
+
+Returns podcasts and authors related to a category.
+
+---
+
+## Authors
+
+### Create Author
+
+```http
+POST /authors
+```
+
+### Get All Authors
+
+```http
+GET /authors
+```
+
+### Get Author By ID
+
+```http
+GET /authors/:id
+```
+
+### Update Author
+
+```http
+PATCH /authors/:id
+```
+
+### Delete Author
+
+```http
+DELETE /authors/:id
+```
+
+### Upload Podcast
+
+```http
+POST /authors/:id/podcasts
+```
+
+Supports `.mp3` file uploads.
+
+---
+
+## Podcasts
+
+### Get All Podcasts
+
+```http
+GET /podcasts
+```
+
+### Get Podcast By ID
+
+```http
+GET /podcasts/:id
+```
+
+### Stream Podcast
+
+```http
+GET /podcasts/:id/listen
+```
+
+### Download Podcast
+
+```http
+GET /podcasts/:id/download
+```
+
+---
+
+# 📦 Models
+
+## Author Model
+
+```json
+{
+  "name": "String",
+  "categories": ["science", "technology"],
+  "profileImageURL": "String",
+  "thumbnailProfileImageURL": "String",
+  "about": "String"
+}
+```
+
+---
+
+## Podcast Model
+
+```json
+{
+  "title": "String",
+  "description": "String",
+  "imageURL": "String",
+  "thumbnailImageURL": "String",
+  "category": "science",
+  "stars": 5
+}
+```
+
+---
+
+# ☁️ Deployment
+
+This project can be deployed easily on:
+
+- Heroku
+- Railway
+- Render
+- VPS servers
+
+Example production command:
+
+```bash
+npm start
+```
+
+---
+
+# 🤝 Contributing
+
+Contributions are always welcome 🚀
+
+1. Fork the repository
+2. Create your feature branch
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request
+
+---
+
+# 👨‍💻 Author
+
+### Stenio Wagner
+
+- GitHub: https://github.com/steniowagner
+- LinkedIn: https://www.linkedin.com/in/steniowagner/
+
+---
+
+# 📜 License
+
+This project is licensed under the MIT License.
